@@ -72,6 +72,9 @@ spec:
       resources:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- if dig "runtimeClassName" "" . }}
+      runtimeClassName: {{ dig "runtimeClassName" "" . }}
+      {{- end }}
       {{- with (dig "securityContext" (dict) .) }}
       securityContext:
         {{- toYaml . | nindent 8 }}

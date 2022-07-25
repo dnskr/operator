@@ -50,6 +50,9 @@ tenant:
       affinity: { }
       ## Configure resource requests and limits for MinIO containers
       resources: { }
+      ## Configure Runtime Class name
+      ## Read more here: https://kubernetes.io/docs/concepts/containers/runtime-class/
+      runtimeClassName: ""
       ## Configure security context
       securityContext: { }
       ## Configure topology constraints
